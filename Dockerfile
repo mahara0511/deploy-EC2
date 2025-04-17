@@ -12,11 +12,10 @@ RUN npm install
 COPY . .
 
 # Build the app
-RUN npm run build && ls -la 
-RUN ls
-RUN ls ../
+RUN npm run build
+
 # Expose the port (default Nest port is 3000)
 EXPOSE 3000
 
 # Run the built app
-CMD ["node", "dist/main.js"]
+CMD ["npm", "run", "start:prod"]

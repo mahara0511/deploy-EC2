@@ -39,8 +39,9 @@ jobs:
                       if [ ! -d "my-nest-app" ]; then
                         git clone https://github.com/mahara0511/deploy-EC2.git my-nest-app
                       fi
-                      git pull https://github.com/mahara0511/deploy-EC2.git my-nest-app
+
                       cd my-nest-app
+                      git pull https://github.com/mahara0511/deploy-EC2.git
                       echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
 
                       # Ensure Docker Compose is installed

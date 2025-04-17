@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
     nest-app:
-        inage: khanhzip14/nest-app:latest # Use the latest image from Docker Hub
+        image: khanhzip14/nest-app:latest # Use the latest image from Docker Hub
         ports:
             - '3000:3000' # Exposing the application on port 3000
         env_file:

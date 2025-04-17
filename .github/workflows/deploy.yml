@@ -64,6 +64,6 @@ jobs:
                       echo "NODE_ENV=production" >> .env
 
                       # Restart the app
-                      docker-compose pull
-                      docker-compose down
-                      docker-compose up -d
+                      # docker-compose pull
+                      # docker-compose down
+                      # docker-compose up -d

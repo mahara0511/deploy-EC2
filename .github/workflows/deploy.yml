@@ -61,8 +61,6 @@ jobs:
 
                       # Update .env file
                       echo "${{ secrets.PRODUCTION }}" > .env
-                      echo "NODE_ENV=production" >> .env
-                      echo "${{ secrets.PRODUCTION }}"                      
 
                       # Restart the app
                       docker-compose pull

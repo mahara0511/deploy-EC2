@@ -20,9 +20,9 @@ services:
         image: postgres:15 # Use the official PostgreSQL image
         restart: always
         environment:
-            POSTGRES_USER: ${POSTGRES_USER} # These values should be set in the .env.prod file
-            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-            POSTGRES_DB: ${POSTGRES_DB}
+            POSTGRES_USER: ${DATABASE_USER} # These values should be set in the .env.prod file
+            POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+            POSTGRES_DB: ${DATABASE_NAME}
         ports:
             - '5432:5432' # Expose PostgreSQL on default port
         volumes:

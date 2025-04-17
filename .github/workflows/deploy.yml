@@ -1,4 +1,4 @@
-name: CI/CD for NestJS 
+name: CI/CD for NestJS
 
 on:
     push:
@@ -40,6 +40,7 @@ jobs:
                         git clone https://github.com/mahara0511/deploy-EC2.git my-nest-app
                       fi
                       cd my-nest-app
+                      echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
 
                       # Ensure Docker Compose is installed
                       if ! command -v docker-compose &> /dev/null; then

@@ -9,8 +9,6 @@ services:
             - .env
         depends_on:
             - postgres
-        volumes:
-            - .:/app # Mount the current directory to the container (can be optimized for production)
         command: npm run start:prod # Run the production build of NestJS app
         restart: always # Ensure the container restarts if it crashes
         networks:

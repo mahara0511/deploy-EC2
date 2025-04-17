@@ -54,19 +54,6 @@ jobs:
                       echo "${{ secrets.PRODUCTION }}" > .env
                       echo "NODE_ENV=production" >> .env
 
-                      # Create or update docker-compose.yml
-                      cat > docker-compose.yml <<EOF
-                      version: '3'
-                      services:
-                        app:
-                          image: ${{ secrets.DOCKER_USERNAME }}/nest-app:latest
-                          restart: always
-                          env_file:
-                            - .env
-                          ports:
-                            - "3000:3000"
-                      EOF
-
                       # Restart the app
                       docker-compose pull
                       docker-compose down

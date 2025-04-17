@@ -12,7 +12,7 @@ RUN npm install
 COPY . .
 
 # Build the app
-RUN npm run build
+RUN npm run build && ls -la dist
 
 # Expose the port (default Nest port is 3000)
 EXPOSE 3000
